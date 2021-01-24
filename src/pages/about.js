@@ -1,13 +1,16 @@
 import React from 'react'
 import Header from '../components/header';
+
 // markup
-const IndexPage = () => {
+const AboutPage = () => {
   return (
     <>
       <Header></Header>
-      <main>Hi</main>
+      <main>
+        About Me
+      </main>
     </>
   )
 }
 
-export default IndexPage
+export default AboutPage

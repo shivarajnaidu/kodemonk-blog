@@ -1,0 +1,17 @@
+header.top-nav {
+    background-size: cover;
+}
+
+header.top-nav .nav-link {
+    opacity: .8;
+    transition: opacity 0.35s ease-in-out;
+}
+
+header.top-nav .nav-link:hover {
+    opacity: 1;
+}
+
+header.top-nav .hero-banner {
+    max-height: 340px;
+    min-height: 200px
+}
