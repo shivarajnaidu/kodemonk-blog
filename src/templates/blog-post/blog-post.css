@@ -1,0 +1,9 @@
+.blog-post header h1 {
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 500px) {
+    .blog-post header h1 {
+        font-size: 4rem;
+    }
+}

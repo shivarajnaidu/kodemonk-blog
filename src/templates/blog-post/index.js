@@ -1,12 +1,21 @@
 import React from 'react'
-import Header from '../components/header'
+import { format } from 'date-fns';
+import Header from '../../components/header'
 import { Helmet } from 'react-helmet';
+import './blog-post.css';
+import { graphql } from 'gatsby';
 // import config from '../website-config';
-// import { graphql } from "gatsby"
 
 // markup
 const BlogPost = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
+
+  const date = new Date(post.frontmatter.date);
+  // 2018-08-20
+  const datetime = format(date, 'yyyy-MM-dd');
+  // 20 AUG 2018
+  const displayDatetime = format(date, 'dd LLL yyyy');
+
 
   return (
     <>
@@ -23,11 +32,22 @@ const BlogPost = ({ data, pageContext, location }) => {
         <meta property="article:published_time" content={post.frontmatter.date} />
       </Helmet>
       <Header></Header>
-      <main>
-        <article>
-          <header>
+      <main className="blog-post">
+        <article className="container">
+          <header className="px-5 py-3">
             <h1>{post.frontmatter.title}</h1>
+            <p>{post.excerpt}</p>
+            <p>
+              <span className="post-card-byline-date">
+                <time dateTime={datetime}>{displayDatetime}</time>{' '}
+                <span className="bull">&bull;</span> {post.timeToRead} min read
+            </span>
+            </p>
           </header>
+
+          <section dangerouslySetInnerHTML={{ __html: post.html }}>
+
+          </section>
 
         </article>
       </main>

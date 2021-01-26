@@ -9,7 +9,7 @@ const IndexPage = (props) => {
         <>
             <Header isHome></Header>
             <main>
-                <div className="container">
+                <div className="container pt-4">
                     <div className="row">
                         {
                             props.data?.allMarkdownRemark.edges.map((post, index) => {

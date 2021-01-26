@@ -12,14 +12,16 @@ const BlogPostCard = ({ post }) => {
     const displayDatetime = format(date, 'dd LLL yyyy');
 
     return (
-        <article className="blog-post-card p-3 w-100">
-            <Link className="d-flex flex-column w-100" to={post.fields.slug}>
+        <article className="blog-post-card w-100">
+            <Link className="d-flex flex-column w-100 text-dark text-decoration-none" to={post.fields.slug}>
                 <img className="w-100 post-thumbnail" src="https://gatsby-casper.netlify.app/static/2823decbecd34c6071cef2221f03b4ff/1920d/testimg-cover.jpg" loading="lazy" decoding="async" alt=""></img>
-                <h1>{post.frontmatter.title}</h1>
-                <span className="post-card-byline-date">
-                    <time dateTime={datetime}>{displayDatetime}</time>{' '}
-                    <span className="bull">&bull;</span> {post.timeToRead} min read
-            </span>
+                <section className="px-3 pb-3">
+                    <h2 className="pt-3">{post.frontmatter.title}</h2>
+                    <span className="text-secondary">
+                        <time dateTime={datetime}>{displayDatetime}</time>{' '}
+                        <span className="bull">&bull;</span> {post.timeToRead} min read
+                    </span>
+                </section>
             </Link>
         </article>
     )

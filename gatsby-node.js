@@ -54,7 +54,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
   // Create blog posts
-  const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);
+  const blogPostTemplate = path.resolve(`./src/templates/blog-post/index.js`);
   posts.forEach(({ node }, index) => {
     const prev = index === 0 ? null : posts[index - 1].node;
     const next = index === posts.length - 1 ? null : posts[index + 1].node;
