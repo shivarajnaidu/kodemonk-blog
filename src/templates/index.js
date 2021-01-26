@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
-import React from 'react'
+import React from 'react';
+import BlogPostCard from '../components/blog-post-card';
 import Header from '../components/header';
 
 // markup
@@ -8,13 +9,18 @@ const IndexPage = (props) => {
         <>
             <Header isHome></Header>
             <main>
-                <div>
-                    {
-                        props.data?.allMarkdownRemark.edges.map((post, index) => {
-                            // filter out drafts in production
-                            return (<div key={post.node.fields.slug} post={post.node} large={index === 0} >hi</div>);
-                        })
-                    }
+                <div className="container">
+                    <div className="row">
+                        {
+                            props.data?.allMarkdownRemark.edges.map((post, index) => {
+                                return (
+                                    <div className="col-12 col-md-4" key={post.node.fields.slug}>
+                                        <BlogPostCard post={post.node} large={index === 0} />
+                                    </div>
+                                );
+                            })
+                        }
+                    </div>
                 </div>
             </main>
         </>

@@ -10,7 +10,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: `/blog${slug}`,
+      value: `blog${slug}`,
     })
   }
 }
@@ -55,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create blog posts
   const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`);
-  posts.forEach(({ node }) => {
+  posts.forEach(({ node }, index) => {
     const prev = index === 0 ? null : posts[index - 1].node;
     const next = index === posts.length - 1 ? null : posts[index + 1].node;
 
@@ -68,7 +68,7 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: node.fields.slug,
         prev,
         next,
-        primaryTag: node.frontmatter.tags ? node.frontmatter.tags[0] : '',
+        primaryTag: node.frontmatter?.tags ? node.frontmatter.tags[0] : '',
       },
     })
   });
