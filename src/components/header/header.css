@@ -1,5 +1,6 @@
 header.top-nav {
     background-size: cover;
+    background-color: var(--app-topnav-bg);
 }
 
 header.top-nav .nav-link {

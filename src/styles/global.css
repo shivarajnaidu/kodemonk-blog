@@ -1,3 +1,6 @@
 :root {
     --bs-font-sans-serif: 'Noto Sans';
+
+    /* header */
+    --app-topnav-bg: black;
 }
