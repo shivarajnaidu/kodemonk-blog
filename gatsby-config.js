@@ -1,3 +1,4 @@
+
 module.exports = {
   siteMetadata: {
     title: "kodemonk-blog",
@@ -19,7 +20,27 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          "gatsby-remark-embed-video",
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              theme: 'vscode'
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
@@ -36,6 +57,14 @@ module.exports = {
         path: "./src/content/blog/",
       },
       __key: "blogposts",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blogposts",
+        path: "./src/content/images",
+      },
+      __key: "blogpostimages",
     },
     {
       resolve: "gatsby-source-filesystem",

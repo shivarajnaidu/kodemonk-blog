@@ -31,7 +31,7 @@ const Header = ({ isHome }) => {
                   <div className="hero-banner py-lg-4 d-flex flex-column justify-content-center text-center text-white">
                     <div className="py-5">
                       <h1>KodeMonk</h1>
-                      <h2>Place for tech ethernity</h2>
+                      <h2>My room on internet</h2>
                     </div>
                   </div>
                 </div>
