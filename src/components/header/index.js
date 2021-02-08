@@ -5,7 +5,7 @@ import bgImage from './hm-heder-bg.png';
 import './header.css';
 
 const Header = ({ isHome }) => {
-  console.log(isHome);
+  // console.log(isHome);
   return (
     <header className="container-fluid top-nav py-2" style={{ ...(isHome && {backgroundImage: `url(${bgImage})`}) }}>
       <div className="container">
