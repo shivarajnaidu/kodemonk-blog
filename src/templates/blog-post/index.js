@@ -1,6 +1,7 @@
 import React from 'react'
 import { format } from 'date-fns';
-import Header from '../../components/header'
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 import { Helmet } from 'react-helmet';
 import './blog-post.css';
 import { graphql } from 'gatsby';
@@ -73,6 +74,10 @@ const BlogPost = ({ data, pageContext, location }) => {
 
         </article>
       </main>
+
+      {/* Footer */}
+
+      <Footer/>
     </>
   )
 }

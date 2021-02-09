@@ -5,9 +5,12 @@
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.12);
 }
 
-.blog-post-card img.post-thumbnail {
+.blog-post-card .thumbnail-container {
+    height: 250px;
+}
+
+.blog-post-card .post-thumbnail {
     border-radius:  var(--card-radius) var(--card-radius) 0 0;
-    max-height: 277px;
 }
 
 .blog-post-card h2 {
