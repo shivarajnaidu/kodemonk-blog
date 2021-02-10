@@ -3,30 +3,32 @@ import React from 'react';
 import BlogPostCard from '../components/blog-post-card';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import SEO from '../components/seo';
 
 // markup
 const IndexPage = (props) => {
-    return (
-        <>
-            <Header isHome></Header>
-            <main className="pb-2">
-                <div className="container pt-4">
-                    <div className="row">
-                        {
-                            props.data?.allMarkdownRemark.edges.map((post, index) => {
-                                return (
-                                    <div className="col-12 col-md-4 mt-3 mt-md-0" key={post.node.fields.slug}>
-                                        <BlogPostCard post={post.node} large={index === 0} />
-                                    </div>
-                                );
-                            })
-                        }
-                    </div>
-                </div>
-            </main>
-            <Footer/>
-        </>
-    )
+  return (
+    <>
+      <SEO></SEO>
+      <Header isHome></Header>
+      <main className="pb-2">
+        <div className="container pt-4">
+          <div className="row">
+            {
+              props.data?.allMarkdownRemark.edges.map((post, index) => {
+                return (
+                  <div className="col-12 col-md-4 mt-3 mt-md-0" key={post.node.fields.slug}>
+                    <BlogPostCard post={post.node} large={index === 0} />
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
 }
 
 

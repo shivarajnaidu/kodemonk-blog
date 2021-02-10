@@ -2,7 +2,7 @@ import React from 'react'
 import { format } from 'date-fns';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-import { Helmet } from 'react-helmet';
+import SEO from '../../components/seo';
 import './blog-post.css';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -39,21 +39,17 @@ const BlogPost = ({ data, pageContext, location }) => {
   // 20 AUG 2018
   const displayDatetime = format(date, 'dd LLL yyyy');
 
+  const seo = {
+    title: post.frontmatter.title,
+    description: post.frontmatter.excerpt || post.excerpt,
+    date: datetime,
+    path: '',
+    image: post.frontmatter.featuredImage?.publicURL
+  };
+
   return (
     <>
-      <Helmet>
-        {/* <html lang={config.lang} /> */}
-        <title>{post.frontmatter.title}</title>
-
-        <meta name="description" content={post.frontmatter.excerpt || post.excerpt} />
-        {/* <meta property="og:site_name" content={config.title} /> */}
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={post.frontmatter.title} />
-        <meta property="og:description" content={post.frontmatter.excerpt || post.excerpt} />
-        {/* <meta property="og:url" content={config.siteUrl + location.pathname} /> */}
-        <meta property="article:published_time" content={post.frontmatter.date} />
-      </Helmet>
-
+      <SEO post={seo}></SEO>
       <Header></Header>
       <main className="blog-post">
         <article className="container">
@@ -77,7 +73,7 @@ const BlogPost = ({ data, pageContext, location }) => {
 
       {/* Footer */}
 
-      <Footer/>
+      <Footer />
     </>
   )
 }
