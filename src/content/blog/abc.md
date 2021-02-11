@@ -3,7 +3,7 @@ title: 'Great Gatsby'
 slug: 'my-second-post'
 author: [Yuvaraj V]
 tags: []
-featuredImage: ../images/postgreslogin.png
+# featuredImage: ../images/postgreslogin.png
 date: '2021-02-07'
 ---
 

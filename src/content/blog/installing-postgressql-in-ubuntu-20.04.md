@@ -54,15 +54,17 @@ You can also check the status of postgreql using `systemctl` command
 ```bash
 sudo systemctl status postgresql
 ```
-
+You'll see something similar to the below one if it is running properly..
+![Systemctl status output](../images/sysctl-postgresql-status.png)
 
 ## Step 3: Connect And Create, List Databases
 
 The successfull installation of PostgreSQL will have created new user (`postgres`). We can switch to that user using following command `sudo -i -u postgres` and connect to the db using `psql` command.
 
-<!-- Image -->
+![psql command shell](../images/postgreslogin-psql.png)
 
 Now we can create teh database using `CREATE DATABASE dbname;` and list the databases using `\l` or `\list`
+If you want to delete the database, you can use `DROP DATABASE dbname;`
 
 You can connect to the database using `\c dbname;`
 

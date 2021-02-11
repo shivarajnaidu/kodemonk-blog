@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 const SEO = ({ post = {} }) => {
