@@ -1,6 +1,6 @@
 ---
 title: 'Installing PostgreSQL on Ubuntu 20.04'
-slug: 'installing-postgresql-on-ubuntu-20-04'
+slug: '/installing-postgresql-on-ubuntu-20-04'
 author: [Yuvaraj V]
 tags: [postgresql, database, sql]
 featuredImage: ../images/PostgreSQL_logo.svg
@@ -69,3 +69,19 @@ If you want to delete the database, you can use `DROP DATABASE dbname;`
 You can connect to the database using `\c dbname;`
 
 ***Note: Dont't forget to put semicolon (;) at the end of the command***
+
+## Basic CRUD operations
+
+Next we will see how to Insert, update, read and delete data in postgresql database
+
+Let's create new database with name `tinydb` and table called `tinylinks` with following fields 
+
+- `original_url` - URL that we are want to make short
+- `slug` - tiny url slug (a unique random alpha numaric value)
+
+```bash
+CREATE
+```
+
+`youtube: https://www.youtube.com/watch?v=9UqEFKmA7mM`
+

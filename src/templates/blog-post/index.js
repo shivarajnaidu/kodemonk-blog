@@ -53,14 +53,16 @@ const BlogPost = ({ data, pageContext, location }) => {
       <Header></Header>
       <main className="blog-post">
         <article className="container">
-          <header className="px-5 py-3">
-            <h1>{post.frontmatter.title}</h1>
-            <p>
-              <span className="post-card-byline-date">
-                <time dateTime={datetime}>{displayDatetime}</time>{' '}
-                <span className="bull">&bull;</span> {post.timeToRead} min read
+          <header className="py-3">
+            <section className="px-md-5">
+              <h1>{post.frontmatter.title}</h1>
+              <p>
+                <span className="post-card-byline-date">
+                  <time dateTime={datetime}>{displayDatetime}</time>{' '}
+                  <span className="bull">&bull;</span> {post.timeToRead} min read
             </span>
-            </p>
+              </p>
+            </section>
             <FeaturedImage post={post} />
           </header>
 
