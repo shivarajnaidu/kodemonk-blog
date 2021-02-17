@@ -7,7 +7,7 @@ const socialLinks = [
     { icon: 'bi-linkedin', url: 'https://www.linkedin.com/in/shivarajnaidu' },
     { icon: 'bi-github', url: 'https://github.com/shivarajnaidu' },
     { icon: 'bi-twitter', url: 'https://twitter.com/YuvarajVemula' },
-    { icon: 'bi-youtube', url: 'https://www.youtube.com/channel/UCYsYM-ICsRYlgIxlkIo9FLQ' },
+    { icon: 'bi-youtube', url: 'https://www.youtube.com/c/KodeMonk' },
     { icon: 'bi-envelope-fill', url: 'mailto:shivarajnaidu@gmail.com' },
 ];
 

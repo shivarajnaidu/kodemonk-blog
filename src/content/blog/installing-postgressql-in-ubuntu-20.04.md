@@ -77,11 +77,46 @@ Next we will see how to Insert, update, read and delete data in postgresql datab
 Let's create new database with name `tinydb` and table called `tinylinks` with following fields 
 
 - `original_url` - URL that we are want to make short
-- `slug` - tiny url slug (a unique random alpha numaric value)
+- `slug` - tiny url slug (a unique value)
 
 ```bash
-CREATE
+CREATE TABLE tinylinks(                                                                            
+original_url VARCHAR(255) NOT NULL,
+slug VARCHAR(255) NOT NULL UNIQUE
+);
 ```
+
+Insert data into the table use `INSERT` statement
+
+```bash
+INSERT INTO tinylinks (original_url, slug) VALUES ('https://kodemonk.com/abc?q=123somelongurltext', 'kodeemonk');
+```
+
+To bulk insert...
+
+```bash
+INSERT INTO tinylinks (original_url, slug) VALUES ('https://kodemonk.com/somelingtext', 'kodemonk-a'), ('https://fb.com/somelogongtexttttt', 'fbslt');
+```
+
+You can list the data from the table using `SELECT` statement
+
+```bash
+SELECT * FROM tinylinks;
+```
+
+You can update specific data using `UPDATE` statement with `WHERE` condition
+
+```bash
+UPDATE tinylinks SET slug = 'kodeemonk' WHERE slug = 'kodemonk';
+```
+
+To delete use `DELETE` sttement
+```bash
+DELETE FROM tinylinks WHERE slug = 'kodemonk';
+```
+
+You can also see the 
 
 `youtube: https://www.youtube.com/watch?v=9UqEFKmA7mM`
 
+`youtube: https://www.youtube.com/watch?v=vEvDJMg9ixU`
