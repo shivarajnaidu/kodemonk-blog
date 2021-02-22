@@ -1,4 +1,5 @@
 
+console.log(process.env.GA_TRACKING_ID, '------------------GA_TRACKING_ID----------------')
 module.exports = {
   siteMetadata: {
     title: 'KodeMonk',
