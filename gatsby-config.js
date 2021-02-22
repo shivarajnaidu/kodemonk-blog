@@ -1,9 +1,8 @@
 
-console.log(process.env.GA_TRACKING_ID, '------------------GA_TRACKING_ID----------------')
 module.exports = {
   siteMetadata: {
     title: 'KodeMonk',
-    description: 'My place on Internet to share my words',
+    description: 'My place on Internet',
     baseUrl: 'https://kodemonk.dev', // used to create absolute URLs for SEO
     siteUrl: 'https://kodemonk.dev',
   },
