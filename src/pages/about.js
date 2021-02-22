@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import EmailSubscription from '../components/email-subscription';
 import SEO from '../components/seo';
 import './css/about.css';
 
@@ -23,7 +24,7 @@ const AboutPage = () => {
           <div className="row">
             {/* Content */}
             <section className="col-12 col-md-8 col-lg-9">
-              <img className="img-fluid bg-light" style={{minHeight: '350px'}} alt="About me" loading="lazy" decoding="async" src="https://avatars.githubusercontent.com/u/12374494"></img>
+              <img className="img-fluid bg-light" style={{ minHeight: '350px' }} alt="About me" loading="lazy" decoding="async" src="https://avatars.githubusercontent.com/u/12374494"></img>
               <h1 className='fst-italic'>
                 About Me
               </h1>
@@ -40,20 +41,8 @@ const AboutPage = () => {
 
             {/* Subscription */}
             <section className="col-12 col-md-4 col-lg-3">
-              <div className="email-subscription py-3">
-                <h2>Subscribe Updates</h2>
-                <p>
-                  Get new updates from Kodemonk
-                  straight to your mail box
-                </p>
-                <div>
-                  <div className="py-3">
-                    <input name="email" className="form-control" type="email" placeholder="Your Email Address"></input>
-                  </div>
-                  <button className="btn btn-dark w-100">Subscribe</button>
-                </div>
-              </div>
-            </section>
+              <EmailSubscription></EmailSubscription>
+           </section>
           </div>
         </div>
       </main>

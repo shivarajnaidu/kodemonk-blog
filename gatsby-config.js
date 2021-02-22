@@ -4,6 +4,7 @@ module.exports = {
     title: 'KodeMonk',
     description: 'My place on Internet to share my words',
     baseUrl: 'https://kodemonk.dev', // used to create absolute URLs for SEO
+    siteUrl: 'https://kodemonk.dev',
   },
   plugins: [
     {
