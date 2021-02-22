@@ -34,7 +34,8 @@ const EmailSubscription = () => {
                     </input>
                     {!isEmailValid && isTouched && <div className="text-danger"><small>Invalid Email</small></div>}
                 </div>
-                <button disabled={!isEmailValid || !isTouched} onClick={subscribeEmail} className="btn btn-dark w-100">Subscribe</button>
+                <button disabled onClick={subscribeEmail} className="btn btn-dark w-100">Subscribe (Coming soon..)</button>
+                {/* <button disabled={!isEmailValid || !isTouched} onClick={subscribeEmail} className="btn btn-dark w-100">Subscribe</button> */}
             </div>
         </div>
 
