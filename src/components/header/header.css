@@ -1,5 +1,6 @@
 header.top-nav {
     background-size: cover;
+    background-color: var(--app-topnav-bg);
 }
 
 header.top-nav .nav-link {
@@ -14,4 +15,10 @@ header.top-nav .nav-link:hover {
 header.top-nav .hero-banner {
     max-height: 340px;
     min-height: 200px
+}
+
+header.top-nav .hero-banner h2 {
+    font-weight: lighter;
+    font-size: 1.1rem;
+    color: wheat;
 }

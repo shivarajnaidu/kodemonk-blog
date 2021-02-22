@@ -1,0 +1,15 @@
+footer.app-footer {
+    background-color: var(--app-footer-bg);
+}
+
+footer.app-footer .app-bs-icon {
+    font-size: 1rem;
+    color: white;
+    /* color: cornflowerblue; */
+}
+
+@media only screen and (min-width: 700px) {
+    footer.app-footer .app-bs-icon {
+        font-size: 1.5rem;
+    }
+}

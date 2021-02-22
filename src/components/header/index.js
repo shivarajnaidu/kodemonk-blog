@@ -4,9 +4,10 @@ import bgImage from './hm-heder-bg.png';
 
 import './header.css';
 
-const Header = () => {
+const Header = ({ isHome }) => {
+  // console.log(isHome);
   return (
-    <header className="container-fluid top-nav py-2" style={{ backgroundImage: `url(${bgImage})` }}>
+    <header className="container-fluid top-nav py-2" style={{ ...(isHome && {backgroundImage: `url(${bgImage})`}) }}>
       <div className="container">
         {/* Navbar */}
         <section className="row">
@@ -15,7 +16,6 @@ const Header = () => {
               <Link className="nav-link p-3 text-white" to="/">KodeMonk</Link>
               <Link className="nav-link p-3 text-white" to="/">Home</Link>
               <Link className="nav-link p-3 text-white" to="/about">About</Link>
-              <Link className="nav-link p-3 text-white" to="/">Contact Me</Link>
             </div>
           </nav>
           <section className="col-12 col-md-6">
@@ -23,18 +23,22 @@ const Header = () => {
         </section>
 
         {/* Hero banner */}
-        <section className="row">
-          <div className="col-12">
-            <div className="py-0 py-md-5">
-              <div className="hero-banner py-lg-4 d-flex flex-column justify-content-center text-center text-white">
-                <div className="py-5">
-                  <h1>KodeMonk</h1>
-                  <h2>Place for tech ethernity</h2>
+        {
+          isHome && (
+            <section className="row">
+              <div className="col-12">
+                <div className="py-0 py-md-5">
+                  <div className="hero-banner py-lg-4 d-flex flex-column justify-content-center text-center text-white">
+                    <div className="py-5">
+                      <h1>KodeMonk</h1>
+                      <h2>My place on internet</h2>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </section>
+          )
+        }
       </div>
     </header>
   )

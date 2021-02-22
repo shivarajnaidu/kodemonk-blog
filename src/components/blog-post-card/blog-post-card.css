@@ -1,0 +1,18 @@
+.blog-post-card {
+    --card-radius: 4px;
+    border-radius: var(--card-radius);
+    background-color: #fff;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.12);
+}
+
+.blog-post-card .thumbnail-container {
+    height: 250px;
+}
+
+.blog-post-card .post-thumbnail {
+    border-radius:  var(--card-radius) var(--card-radius) 0 0;
+}
+
+.blog-post-card h2 {
+    font-size: 1.5rem;
+}
