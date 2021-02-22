@@ -21,6 +21,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
+        name: `KodeMonk`,
+        short_name: `KodeMonk`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `standalone`,
         icon: 'src/images/icon.png',
       },
     },
