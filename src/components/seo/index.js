@@ -29,7 +29,7 @@ const SEO = ({ post = {} }) => {
     const title = post.title || defaults.title;
     const description = post.description || defaults.description;
     const url = new URL(post.path || '', defaults.baseUrl);
-    const image = post.image ? new URL(post.image, defaults.baseUrl) : false;
+    const image = post.image ? new URL(post.image, defaults.baseUrl) : new URL('/icons/icon-512x512.png', defaults.baseURL);
 
     return (
         <Helmet>
