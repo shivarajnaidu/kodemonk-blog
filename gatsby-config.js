@@ -35,6 +35,7 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-embed-video',
+          'gatsby-remark-responsive-iframe',
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
