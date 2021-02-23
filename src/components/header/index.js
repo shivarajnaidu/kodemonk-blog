@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import bgImage from './hm-heder-bg.png';
+import bgImage from './hm-heder-bg.jpg';
 
 import './header.css';
 
