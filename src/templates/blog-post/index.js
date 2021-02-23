@@ -17,7 +17,7 @@ const FeaturedImage = ({ post }) => {
 
   if (!childImageSharp && (extension === 'svg')) {
     return (
-      <img className="featured-image native-image d-block m-auto h-100" src={publicURL} decoding="async" alt={post.frontmatter.title} loading="lazy"></img>
+      <img className="featured-image native-image d-block m-auto img-fluid h-100" src={publicURL} decoding="async" alt={post.frontmatter.title} loading="lazy"></img>
     )
   }
 
