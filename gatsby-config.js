@@ -2,7 +2,7 @@
 module.exports = {
   siteMetadata: {
     title: 'KodeMonk',
-    description: 'My place on Internet',
+    description: 'My place on Internet - A blog about software development, technology and all that kind of geeky stuff.',
     baseUrl: 'https://kodemonk.dev', // used to create absolute URLs for SEO
     siteUrl: 'https://kodemonk.dev',
   },

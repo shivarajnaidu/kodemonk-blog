@@ -43,7 +43,7 @@ const SEO = ({ post = {} }) => {
             <meta property="og:type" content="article" />
             <meta property="og:title" content={title} />
             {description && <meta property="og:description" content={description} />}
-            {image && <meta property="og:image" content={image} />}
+            <meta property="og:image" content={image} />
 
             {/* <meta name="twitter:card" content="summary_large_image" /> */}
             {/* <meta name="twitter:creator" content={post.author.twitter} /> */}
