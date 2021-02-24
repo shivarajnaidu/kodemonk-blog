@@ -43,7 +43,7 @@ const BlogPost = ({ data, pageContext, location }) => {
     title: post.frontmatter.title,
     description: post.frontmatter.excerpt || post.excerpt,
     date: datetime,
-    path: pathname.pathname || '',
+    path: location.pathname || '',
     image: post.frontmatter.featuredImage?.publicURL
   };
 
