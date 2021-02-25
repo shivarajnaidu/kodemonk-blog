@@ -14,3 +14,8 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 main {
     flex: 1;
 }
+
+
+.cursor-pointer {
+    cursor: pointer;
+}

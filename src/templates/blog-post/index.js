@@ -6,6 +6,7 @@ import SEO from '../../components/seo';
 import './blog-post.css';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { sharePost } from '../../services/share';
 // import config from '../website-config';
 
 const FeaturedImage = ({ post }) => {
@@ -47,6 +48,10 @@ const BlogPost = ({ data, pageContext, location }) => {
     image: post.frontmatter.featuredImage?.publicURL
   };
 
+  const share = async () => {
+    sharePost({ title: seo.title, text: seo.description });
+  };
+
   return (
     <>
       <SEO post={seo}></SEO>
@@ -60,7 +65,10 @@ const BlogPost = ({ data, pageContext, location }) => {
                 <span className="post-card-byline-date">
                   <time dateTime={datetime}>{displayDatetime}</time>{' '}
                   <span className="bull">&bull;</span> {post.timeToRead} min read
-            </span>
+                </span>
+                <button onClick={share} className="btn shadow-none align-baseline mx-1 btn-link">
+                  <i className="bi bi-share-fill"></i>
+                </button>
               </p>
             </section>
             <FeaturedImage post={post} />
