@@ -60,8 +60,10 @@ If the connection is successful you can see the list of databases
 
 You can see more about how to get start with pgAdmin through the below [Youtube](https://www.youtube.com/c/KodeMonk) videos.. You can also find more videos like this on our youtube [channel](https://www.youtube.com/c/KodeMonk).
 
+### How to use pgAdmin 4
 `youtube: https://www.youtube.com/watch?v=1KuDrATYj20`
 
+### How to install pgAdmin 4
 `youtube: https://www.youtube.com/watch?v=d5v5Ze_Wvus`
 
 
