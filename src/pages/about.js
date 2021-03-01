@@ -26,7 +26,7 @@ const AboutPage = () => {
             <section className="col-12 col-md-8 col-lg-9">
               <img className="img-fluid bg-light" style={{ minHeight: '350px' }} alt="About me" loading="lazy" decoding="async" src="https://avatars.githubusercontent.com/u/12374494"></img>
               <h1 className='fst-italic'>
-                About Me
+                About Me (Yuvaraj V)
               </h1>
               <p className="fst-italic text-muted about-me-content">
                 I have been working as Tech lead in Bangalore, also a Freelance developer / Blogger and a Linux fan boy who is intrested
