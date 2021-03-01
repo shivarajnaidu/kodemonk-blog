@@ -4,7 +4,7 @@ slug: '/installing-pgadmin-4-in-ubuntu-20-04'
 author: [Yuvaraj V]
 tags: [postgresql, pgadmin, database]
 featuredImage: ../images/pg-admin-4-startup.jpg
-date: '2021-02-28'
+date: '2021-03-01'
 ---
 
 **PgAdmin 4 (v5)** is a popular database management tool for **PostgreSQL** and its' complete rewrite of pgAdmin 3.
