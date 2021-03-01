@@ -13,7 +13,7 @@ Also includes built-in support for regular [B-tree](https://en.wikipedia.org/wik
 
 - Expression indexes can be created with an index of the result of an expression or function, instead of simply the value of a column.
     
-- k-nearest neighbors (k-NN) indexing (also referred to KNN-GiST[33]) provides efficient searching of "closest values" to that specified, useful to finding similar words, or close objects or locations with geospatial data. This is achieved without exhaustive matching of values.
+- k-nearest neighbors (k-NN) indexing (also referred to KNN-GiST) provides efficient searching of "closest values" to that specified, useful to finding similar words, or close objects or locations with geospatial data. This is achieved without exhaustive matching of values.
 
 - Index-only scans often allow the system to fetch data from indexes without ever having to access the main table.
 - PostgreSQL 9.5 introduced Block Range Indexes (BRIN).
