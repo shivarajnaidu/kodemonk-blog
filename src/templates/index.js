@@ -17,7 +17,7 @@ const IndexPage = (props) => {
             {
               props.data?.allMarkdownRemark.edges.map((post, index) => {
                 return (
-                  <div className="col-12 col-md-4 mt-3 mt-md-0" key={post.node.fields.slug}>
+                  <div className="col-12 col-md-4 my-3" key={post.node.fields.slug}>
                     <BlogPostCard post={post.node} large={index === 0} />
                   </div>
                 );
