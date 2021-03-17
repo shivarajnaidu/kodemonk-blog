@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-plus-operands, @typescript-eslint/no-var-requires */
 const path = require('path');
+const fs = require('fs');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 
@@ -14,6 +15,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
 }
+
+exports.onPostBuild = async () => {
+  fs.copyFileSync(path.resolve('./ads.txt'), path.resolve('./public/ads.txt'));
+  console.log('ads.txt copied');
+};
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
