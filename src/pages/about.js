@@ -1,9 +1,17 @@
 import React from 'react';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import EmailSubscription from '../components/email-subscription';
+// import EmailSubscription from '../components/email-subscription';
 import SEO from '../components/seo';
 import './css/about.css';
+
+const socialLinks = [
+  { icon: 'bi-linkedin', url: 'https://www.linkedin.com/in/shivarajnaidu' },
+  { icon: 'bi-github', url: 'https://github.com/shivarajnaidu' },
+  { icon: 'bi-twitter', url: 'https://twitter.com/YuvarajVemula' },
+  { icon: 'bi-whatsapp', url: 'https://wa.me/919498002109?text=From KodeMonk' },
+  { icon: 'bi-envelope-fill', url: 'mailto:shivarajnaidu@gmail.com' },
+];
 
 // markup
 const AboutPage = () => {
@@ -37,12 +45,38 @@ const AboutPage = () => {
                 at Anna University (Jeppiaar Maamallan Institute of Technology, Sriperumbudur)
                 and MBA (Project Management) at Bharathiar University, Coimbatore
               </p>
+
+              <p className="fst-italic text-muted about-me-content">
+                If you want to contact you can drop a message or send me the mail directly,
+              </p>
+
+              <div className="d-none d-md-block">
+                <div className="d-flex">
+                  {
+                    socialLinks.map(({ icon, url }) => (
+                      <a key={url} href={url} rel="noopener noreferrer" title={url} target="_blank">
+                        <i className={`${icon} mx-2 app-bs-icon`}></i>
+                      </a>
+                    ))
+                  }
+                </div>
+              </div>
             </section>
 
             {/* Subscription */}
             <section className="col-12 col-md-4 col-lg-3">
-              <EmailSubscription></EmailSubscription>
-           </section>
+              {/* <EmailSubscription></EmailSubscription> */}
+              <h3 className="d-none d-md-block">You can find me here</h3>
+              <div className="d-flex">
+                {
+                  socialLinks.map(({ icon, url }) => (
+                    <a key={url} href={url} rel="noopener noreferrer" title={url} target="_blank">
+                      <i className={`${icon} mx-2 app-bs-icon h1`}></i>
+                    </a>
+                  ))
+                }
+              </div>
+            </section>
           </div>
         </div>
       </main>
