@@ -47,7 +47,7 @@ const AboutPage = () => {
               </p>
 
               <p className="fst-italic text-muted about-me-content">
-                If you want to contact you can drop a message or send me the mail directly,
+                If you want to follow/contact you can find me on the below social platforms or you can send me the mail directly,
               </p>
 
               <div className="d-none d-md-block">
