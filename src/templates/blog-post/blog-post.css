@@ -6,6 +6,10 @@
     max-height: 500px;
 }
 
+.blog-post .blog-post-featured-image {
+    max-height: 70vh;
+}
+
 @media only screen and (min-width: 500px) {
     .blog-post header h1 {
         font-size: 4rem;

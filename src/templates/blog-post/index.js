@@ -24,6 +24,7 @@ const FeaturedImage = ({ post }) => {
 
   return (
     <Img
+      className="blog-post-featured-image"
       fluid={childImageSharp.fluid}
       alt="Featured Image"
     />
