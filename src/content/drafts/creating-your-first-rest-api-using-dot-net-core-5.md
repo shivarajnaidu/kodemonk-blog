@@ -4,7 +4,7 @@ slug: '/installing-dotnet-core-5-on-ubuntu-20-04'
 author: [Yuvaraj V]
 tags: [dotnet, dotnet-core, dotnet-core-5.0, linux, ubuntu]
 featuredImage: ../images/NET_Core_Logo.png
-date: '2021-06-01'
+date: '2021-05-30'
 ---
 
 ***.Net Core*** is an opensource cross platform framework used to build range of applications. essentially used to build backend and desktop applications.
