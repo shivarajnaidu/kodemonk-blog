@@ -56,7 +56,10 @@ export const pageQuery = graphql`query blogPageQuery($skip: Int!, $limit: Int!) 
             extension
             publicURL
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }

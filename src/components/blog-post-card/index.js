@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import React from 'react';
 import { Link } from 'gatsby';
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import './blog-post-card.css';
 

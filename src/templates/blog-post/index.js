@@ -101,7 +101,10 @@ export const query = graphql`query ($slug: String) {
         extension
         publicURL
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }
