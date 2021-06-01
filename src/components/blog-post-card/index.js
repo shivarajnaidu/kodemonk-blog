@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import React from 'react';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import './blog-post-card.css';
 
@@ -26,12 +26,11 @@ const PostCardImage = ({ post }) => {
     }
 
     return (
-        <Img
+        <GatsbyImage
+            image={childImageSharp.gatsbyImageData}
             className="w-100 post-thumbnail h-100"
-            fluid={childImageSharp.fluid}
-            alt="Featured Image"
-        />
-    )
+            alt="Featured Image" />
+    );
 }
 
 const BlogPostCard = ({ post }) => {

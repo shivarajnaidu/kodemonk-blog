@@ -33,13 +33,12 @@ const IndexPage = (props) => {
 
 
 
-export const pageQuery = graphql`
-  query blogPageQuery($skip: Int!, $limit: Int!) {
+export const pageQuery = graphql`query blogPageQuery($skip: Int!, $limit: Int!) {
   allMarkdownRemark(
-      sort: {fields: frontmatter___date, order: DESC},
-      limit: $limit
-      skip: $skip
-      ) {
+    sort: {fields: frontmatter___date, order: DESC}
+    limit: $limit
+    skip: $skip
+  ) {
     edges {
       node {
         id
@@ -57,11 +56,9 @@ export const pageQuery = graphql`
             extension
             publicURL
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
-      }
+          }
         }
       }
     }

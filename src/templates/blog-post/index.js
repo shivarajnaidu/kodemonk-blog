@@ -5,7 +5,7 @@ import Footer from '../../components/footer';
 import SEO from '../../components/seo';
 import './blog-post.css';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 import { sharePost } from '../../services/share';
 // import config from '../website-config';
 
@@ -23,12 +23,11 @@ const FeaturedImage = ({ post }) => {
   }
 
   return (
-    <Img
+    <GatsbyImage
+      image={childImageSharp.gatsbyImageData}
       className="blog-post-featured-image"
-      fluid={childImageSharp.fluid}
-      alt="Featured Image"
-    />
-  )
+      alt="Featured Image" />
+  );
 }
 
 // markup
@@ -90,27 +89,24 @@ const BlogPost = ({ data, pageContext, location }) => {
 }
 
 
-export const query = graphql`
-  query($slug: String) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      excerpt
-      timeToRead
-      frontmatter {
+export const query = graphql`query ($slug: String) {
+  markdownRemark(fields: {slug: {eq: $slug}}) {
+    html
+    excerpt
+    timeToRead
+    frontmatter {
       title
       date
       featuredImage {
         extension
         publicURL
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
-    }
   }
+}
 `;
 
 export default BlogPost
