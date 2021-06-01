@@ -1,5 +1,5 @@
 ---
-title: 'How to Change / Remove Server Name In Nginx On Ubuntu Linux'
+title: 'How to Change / Remove Server Name Header In Nginx On Ubuntu Linux'
 slug: '/setting-custom-sever-header-in-nginx'
 author: [Yuvaraj V]
 tags: [nginx, server, headers, http, nodejs, proxy]
