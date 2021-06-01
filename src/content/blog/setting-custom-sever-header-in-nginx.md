@@ -31,7 +31,7 @@ Now we will see
 - Go to nginx config folder (`cd /etc/nginx/`) and open the configuration file (`nginx.conf`)
 - Add `more_clear_headers Server;` under *http* section.
 - Restart Nginx webserver (`sudo systemctl restart nginx`)
-- Now verify the response you will see only server name not the version of nginx.
+- Now verify the response you will not see server header.
 
 ## Setting custom server name to the server header
 - Install `nginx extras` module with the following command `sudo apt install nginx-extras`
@@ -39,4 +39,4 @@ Now we will see
 - Add `more_set_headers 'Server: MyServer';` under *http* section.
 - Here `MyServer` can be any custom string without any special characters (Spaces and numbers are allowed).
 - Restart Nginx webserver (`sudo systemctl restart nginx`)
-- Now verify the response you will see only server name not the version of nginx.
+- Now verify the response you will see server header with custom value
