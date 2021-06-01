@@ -13,7 +13,7 @@ NginX, is a popular cross platform opensource web server that can also be used a
 In this post we are going to discuss how we can *change / remove **Server** header* from the *HTTP response* sent by nginx setup (on Ubunut) by changing the configuration.
 
 Generally we will get server name and version along with the response like the one shown below..
-![Nginx Response Headers](../images/nginx-headers.jpg)
+![Nginx Response Headers](../images/screen-snap-nginx-headers.webp)
 
 Now we will see
 - How to remove nginx version from server header
