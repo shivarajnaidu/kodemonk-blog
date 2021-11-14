@@ -3,13 +3,13 @@ import React from 'react';
 import BlogPostCard from '../components/blog-post-card';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 // markup
 const IndexPage = (props) => {
   return (
     <>
-      <SEO></SEO>
+      <Seo></Seo>
       <Header isHome></Header>
       <main className="pb-2">
         <div className="container pt-4">

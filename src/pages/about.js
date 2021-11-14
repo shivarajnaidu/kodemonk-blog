@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../components/footer';
 import Header from '../components/header';
 // import EmailSubscription from '../components/email-subscription';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import './css/about.css';
 
 const socialLinks = [
@@ -25,7 +25,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <SEO post={seo}></SEO>
+      <Seo post={seo}></Seo>
       <Header></Header>
       <main className="py-4 about-me-page">
         <div className="container">

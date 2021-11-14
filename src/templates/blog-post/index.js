@@ -2,7 +2,7 @@ import React from 'react'
 import { format } from 'date-fns';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-import SEO from '../../components/seo';
+import Seo from '../../components/seo';
 import './blog-post.css';
 import { graphql } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -54,7 +54,7 @@ const BlogPost = ({ data, pageContext, location }) => {
 
   return (
     <>
-      <SEO post={seo}></SEO>
+      <Seo post={seo}></Seo>
       <Header></Header>
       <main className="blog-post">
         <article className="container">
