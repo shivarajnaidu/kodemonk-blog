@@ -1,4 +1,4 @@
-.about-me-page .about-me-content {
+.aboutMePage :gloabl(.about-me-content) {
     font-size: 1.16rem;
     line-height: 1.7;
 }

@@ -1,7 +1,4 @@
-import React from 'react';
-// import { Link } from 'gatsby';
-
-import './footer.css';
+import styles from './footer.module.css';
 
 const socialLinks = [
     { icon: 'bi-linkedin', url: 'https://www.linkedin.com/in/shivarajnaidu' },
@@ -14,7 +11,7 @@ const socialLinks = [
 
 const Footer = () => {
     return (
-        <footer className="app-footer container-fluid py-2">
+        <footer className={`${styles.appFooter} container-fluid py-2`}>
             <div className="row justify-content-center">
                 <section className="col-6 col-lg-4 d-flex align-items-center text-white">
                     <small className="ps-3 fw-bold">Yuvaraj V &copy; {(new Date()).getFullYear()}</small>

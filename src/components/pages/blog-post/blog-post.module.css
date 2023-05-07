@@ -1,17 +1,17 @@
-.blog-post header h1 {
+.blogPost header h1 {
     font-size: 2rem;
 }
 
-.blog-post .featured-image.native-image {
+.blogPost :global(.featured-image.native-image) {
     max-height: 500px;
 }
 
-.blog-post .blog-post-featured-image {
+.blogPost :global(.blog-post-featured-image) {
     max-height: 70vh;
 }
 
 @media only screen and (min-width: 500px) {
-    .blog-post header h1 {
+    .blogPost header h1 {
         font-size: 4rem;
     }
 }

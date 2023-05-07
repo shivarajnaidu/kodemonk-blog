@@ -1,23 +1,23 @@
-header.top-nav {
+.topNav {
     background-size: cover;
     background-color: var(--app-topnav-bg);
 }
 
-header.top-nav .nav-link {
+.topNav :global(.nav-link)  {
     opacity: .8;
     transition: opacity 0.35s ease-in-out;
 }
 
-header.top-nav .nav-link:hover {
+.topNav :global(.nav-link):hover {
     opacity: 1;
 }
 
-header.top-nav .hero-banner {
+.heroBanner {
     max-height: 340px;
     min-height: 200px
 }
 
-header.top-nav .hero-banner h2 {
+.heroBanner h2 {
     font-weight: lighter;
     font-size: 1.1rem;
     color: wheat;

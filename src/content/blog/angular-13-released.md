@@ -48,7 +48,7 @@ This will even allow us to do the lazy loading in component level easily in near
 Before angular 13 we need to use ComponentFactoryResolver service to retrive teh component before injecting it in the view. But we no longer require that to inject component dynamically in the view.
 
 #### Before
-```
+```ts
 @Component({ … })
 export class MyComp {
     constructor(private viewContainerRef: ViewContainerRef,
@@ -63,7 +63,7 @@ export class MyComp {
 }
 ```
 #### Now (With new api)
-```
+```ts
 @Component({ … })
 export class MyComp {
     constructor(private viewContainerRef: ViewContainerRef) {}
@@ -78,7 +78,7 @@ export class MyComp {
 1. Now you an disable navigation  by binding `undefined` or `null` to `routerLink` 
 2. New event added `routerLinkActive` that will be triggred whenever the active link changes.
    
-```
+```html
  <a 
    routerLink="/orders"
     routerLinkActive="active-link"
