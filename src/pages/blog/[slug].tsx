@@ -6,10 +6,20 @@ import { getPostBySlug, getAllPosts } from '@/services/blog'
 import AppShell from '@/components/app-shell/app-shell';
 import BlogPost from '@/components/pages/blog-post';
 import { Post } from '@/services/blog.types';
+import SEO from '@/components/seo';
 
 type Props = Post;
 export default function Blog(props: Props) {
   // console.log(props.content)
+  const seo = {
+    title: props.frontmatter.title,
+    // description: props.frontmatter.date,
+    date: props.frontmatter.date,
+    path: props.frontmatter.slug,
+    image: props.frontmatter.featuredImage,
+  };
+
+  
   return (
     <AppShell>
       <Head>
@@ -19,6 +29,7 @@ export default function Blog(props: Props) {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css" rel="stylesheet" />
       </Head>
+      <SEO {...seo}></SEO>
       <BlogPost slug={props.slug} content={props.content} frontmatter={props.frontmatter} timeToRead={props.timeToRead}></BlogPost>
     </AppShell>
   )
@@ -30,10 +41,9 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     // https://github.com/sergioramos/remark-prism/issues/265
     .use(html, { sanitize: false })
     .use(prism)
-    .process(post.content || '')
+    .process(post.content || '');
   const content = markdown.toString();
-
-
+  
   return {
     props: {
       ...post,
@@ -42,6 +52,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   }
 }
 
+// This will create dynamic paths for each blog item
 export async function getStaticPaths() {
   const posts = getAllPosts()
 
