@@ -7,7 +7,10 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'KodeMonk',
   description: 'KodeMonk - My place on internet',
-  viewport: 'width=device-width, initial-scale=1',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
   icons: '/favicon.ico',
 }
 
