@@ -1,3 +1,4 @@
+'use client'
 /* eslint-disable @next/next/no-img-element */
 import { format } from 'date-fns';
 // import Seo from '../../components/seo';
