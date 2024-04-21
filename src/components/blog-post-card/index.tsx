@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import format from 'date-fns/format';
 import Link from 'next/link';
 import Image from 'next/image';
 
 import styles from './blog-post-card.module.css';
 import { PostWithOutContent } from '@/services/blog.types';
+import { format } from 'date-fns';
 
 
 const PostCardImage: React.FC<{ post: PostWithOutContent }> = ({ post }) => {
