@@ -2,16 +2,21 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import '@/styles/globals.css';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
   title: 'KodeMonk',
   description: 'KodeMonk - My place on internet',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
   icons: '/favicon.ico',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  // maximumScale: 1,
+  // userScalable: false,
+  // Also supported by less commonly used
+  // interactiveWidget: 'resizes-visual',
 }
 
 interface Props {
