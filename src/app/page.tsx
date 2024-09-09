@@ -13,7 +13,7 @@ interface Props {
 
 function getHomePageData() {
     const posts = getAllPosts();
-    console.log(posts.map(({ content, ...postWithoutContent }) => postWithoutContent))
+    // console.log(posts.map(({ content, ...postWithoutContent }) => postWithoutContent))
 
     return posts.map(({ content, ...postWithoutContent }) => postWithoutContent)
         .sort(({ frontmatter: { date: a } }, { frontmatter: { date: b } }) => +new Date(b) - +new Date(a));
