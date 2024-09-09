@@ -29,7 +29,8 @@ const remarkYoutube = (opts?: Readonly<Options> | null | undefined) => {
 
                 const videoUrl = value.slice(8).trim();
                 if (isUrlValid(videoUrl)) {
-                    const URL_PATTERN = /^https:\/\/(?:youtu\.be\/|www\.youtube\.com\/watch\?v=)(\w+)$/;
+                    // const URL_PATTERN = /^https:\/\/(?:youtu\.be\/|www\.youtube\.com\/watch\?v=)(\w+)$/;
+                    const URL_PATTERN = /^https:\/\/(?:youtu\.be\/|www\.youtube\.com\/watch\?v=)(\w+)(?:&.*)?$/;
                     const match = videoUrl.match(URL_PATTERN);
 
                     if (match && match[1]) {
